@@ -1,0 +1,55 @@
+img{
+    max-width: 100%;
+    height:auto;
+}
+p{
+    font-family:'courier New', 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+    /* line-height: 20px;
+    letter-spacing: 20px;
+    */
+
+}
+/*media queries*/
+/*laptop*/
+@media  screen and (min-width:769px) and (max-width:1024px){
+    img{
+        max-width: 100%;
+        height:auto;
+    }
+    p{
+        font-family:'courier New', 'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-style: italic;
+        text-transform: uppercase;
+         line-height: 20px;
+        letter-spacing: 20px;
+         background-color:red ; 
+
+    }   
+}
+/* tablet */
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    img{
+        max-width: 100%;
+        height:auto;
+    }
+    p{
+        font-family:'courier New', 'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-style: italic;
+        text-transform: uppercase;
+        line-height: 20px;
+        letter-spacing: 20px;
+        background-color:blue ; 
+
+    }   
+}
+
+
+
+
+    

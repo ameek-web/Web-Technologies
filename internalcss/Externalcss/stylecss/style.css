@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+h1{
+    background-color:blueviolet;
+    font-size: 60px;
+    color:white;
+}
+
+p{
+    background-color: aqua;
+    font-size: 20px;
+    color:brown;
+} 
