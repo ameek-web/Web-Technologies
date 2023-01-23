@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Serif&family=Poppins:wght@200&display=swap');
+*{
+    font-family: 'Noto Serif', serif;
+}
+#heading{
+    background-color: #eab676;
+    color:#000;
+    font-size:60px;
+}
+.paragraph{
+    background-color: aquamarine;
+    color:black;
+    font-size: 30px;
+    font-style: italic;
+}
+#p2{
+    background-color: #F38a09;
+    color:#000;
+    font-weight: bold;
+    font-size:40px
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+  
+</head>
+<body>
+    <img name = "slider" width=500 height=auto>
+    <script>
+        var i = 0;
+        var images = [];
+
+        //in var time; 1000 make 1sec change and 3000 in 3 sec//
+        var time = 1000;
+
+        images[0] = 'images.jpg';
+        images[1] = 'images1.jpg';
+        images[2] = 'images2.jpg';
+
+        function slideshow(){
+
+            //src give image location, images[i] many image
+            document.slider.src = images[i];
+            if(i<images.length-1){                //-1 is re-run
+               i++;
+            }else{
+                i=0;
+            }
+
+            setTimeout("slideshow()",time);     //setTimeout= select-time
+        }
+
+        window.onload = slideshow;
+    </script>
+
+    
+</body>
+</html>

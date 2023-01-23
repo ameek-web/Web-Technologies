@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Serif&family=Poppins:wght@200&display=swap');
+*{
+    font-family: 'Noto Serif', serif;
+    margin: 0px;
+}
+body{
+    /* background-image: url("image.jpg"); */
+    background: linear-gradient(to right,red, orange,yellow,green,indigo,violet,blue,red);
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+}
+/* 
+#box1{
+   border-style: dotted;
+   width:250px;
+   height:250px;
+   background-color: blanchedalmond;
+   font-size:10px;
+   border-radius: 10px;
+   padding:5px;
+   margin:10px;
+}
+
+#box2{
+  border-style: double;
+  width:250px;
+  height:250px;
+  background-color: aquamarine;
+  font-size:10px;
+  border-radius: 10px;
+  padding:5px;
+  margin: 10px;
+}
+
+#box3{
+  border-style: dashed;
+  width:250px;
+  height:250px;
+  background-color: aqua;
+  font-size:10px;
+  border-radius:10px;
+  padding:5px;
+  margin: 10px;
+} */
