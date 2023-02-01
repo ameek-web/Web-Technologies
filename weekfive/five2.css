@@ -1,47 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;}
-
-body{
-    background-color:rgb(114, 157, 114) ;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bakbak+One&family=Chivo+Mono:ital,wght@0,500;0,700;0,800;1,900&family=Hanken+Grotesk:wght@200&family=Open+Sans:wght@300&family=Roboto:wght@900&display=swap');
     
-
+body{
+    background-color:rgb(113, 165, 113) ;
+    color:white;
+   margin-left: 80px;
+    
 }
 img{
-    
-    height: 100vh;
-    width: 100%;
-   padding-top: 350px;
-   padding-left: 80px;
-   padding-right: 80px;
-   padding-bottom: 50px;
-   
-    
+    width:90%;
+    height:45vh ;
+    margin-top: 70px;
+    margin-left: 30px;
 }
-
-.other{
-    margin-top: 100px;
-    margin-top: -100vh;
+.header{
     display: flex;
     
 }
+#re{
+    padding-left: 20%;
+    margin-top: 50px;
+
+}
 
 h1{
-    font-size: 40px;
-    margin: 30px auto;
+    font-size: 60px;
+    margin-left: 30px;
+    margin-top:30px;
+    padding-right: 50px;
     
 }
-
+/* .other{
+    
+    margin-right:50%;
+    margin-top:-45vh ;
+} */
 p{
-    margin-top: 40px;
-    font-size: 15px;
-    margin-right: 100px;
+    font-size: 25px;
+    margin-left: 50px;
+
+    
 }
-
-
-
-
