@@ -337,6 +337,17 @@ header .navbar ul li a:hover{
     font-weight: normal;
 }
 
+.hobbie .info p{
+    color:#eee;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    font-weight:normal ;
+    margin-left: 4rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 
 @media (max-width:1200px){
