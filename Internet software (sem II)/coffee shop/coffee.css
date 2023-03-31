@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Shantell+Sans:ital,wght@1,300&display=swap');
+:root{
+    color:white;
+}
+*{
+    font-family: 'Gloock', serif;
+    font-family: 'Shantell Sans', cursive;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: white;
+    color:black;
+}
+
+html{
+    font-size: 62.5%;      /*It make small*/
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+ }
+
+ html::-webkit-scrollbar-track{
+    background:rgb(37, 36, 36);
+}
+
+html::-webkit-scrollbar-thumb{
+    background:white;
+}
+
+body{
+    background:black;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
