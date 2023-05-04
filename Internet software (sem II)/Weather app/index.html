@@ -4,39 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather app</title>
+    <title>Weather Forecast</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
-<div class="Card">
-    <div class="search">
-        <input type="text" placeholder="enter city name" spellcheck="false">
-        <button><img src="search.png"></button>
-    </div>
-    <div class="error">
-        <p>Invalid city name</p>
-    </div>
-    <div class="weather">
-        <img src="cloud.jpg" class="weather-icon">
-        <h1 class="temp">26°c</h1>
-        <h2 class="city">Louisville</h2>
-        <div class="details">
-            <div class="col">
-                <img src="drop.jpg">
-                <div>
-                    <p class="humidity">64%</p>
-                    <p>humidity</p>
-                </div>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" class="search-bar">
+            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"></path></svg></button>
+        </div>
+        <div class="weather loading">
+            <h2 class="city" >Weather in Louisville</h2>
+            <h1 class="temp">289.19K</h1>
+            <div class="flex">
+                <div class="description">Clouds</div>
             </div>
-            <div class="col">
-                <img src="windy.jpg">
-                <div>
-                    <p class="Wind">10.0km/h</p>
-                    <p>Wind speed</p>
+            <div class="humidity">Humidity:55%</div>
+            <div class="wind">Wind speed: 2.06km/h</div>
+            <div class="day">Thursday</div>
+            <div class="date">4 may 2023</div>
         </div>
     </div>
-</div>
-<script src="script.js"></script>
- <body>
-    
 </body>
+
 </html>

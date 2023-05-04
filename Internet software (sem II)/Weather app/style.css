@@ -1,94 +1,64 @@
-*{
+body {
+    background: grey;
     margin: 0;
-    padding: 0;
-    font-family: 'Poppins' sans-serif;
-    box-sizing: border-box;
+    padding-top: 20%;
+    height: 100;
+    justify-content: center;
+    display: flex;
+    background: url('https://source.unsplash.com/random/landscapes');
+    background-size: cover;
 }
-body{
-    background: #222;
-    background-image:url('https://source.unsplash.com/1600x900/?landscape') ;
-}
-.Card{
-    width: 90%;
-    max-width: 470px;
-    background: linear-gradient(135deg,#00feba,#5b548a);;
-    color: #fff;
-    margin: 100px auto 0;
+.card {
     border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 2.1em;
+    max-width: 420px;
+    backdrop-filter: blur(20px);
 }
-.search{
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-
+input.search-bar {
+    border-radius: 18px;
+    height: 2em;
+    background: inherit;
+    font-size: 30px;
+    padding-left: 10px;
+    outline: none;
 }
-.search input{
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    color: #555;
-    padding: 10px 25px;
-    height: 60px;
-    border-radius: 30px;
-    flex: 1;
-    margin-right: 16px;
-    font-size: 18px;
-
-}
-.search button{
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    border-radius: 50%; 
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-}
-.search button img{
-    width: 16px;
-}
-.weather-icon{
-    width: 170px;
-    margin-top: 30px;
+button {
+    border-radius: 12px;
+    height: 2em;
+    background: inherit;
     
 }
-.weather h1{
-    font-size: 80px;
-    font-weight: 500;
+button:hover {
+    background: lavenderblush;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
-.weather h2{
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: -10px;
+.description{
+    text-transform: capitalize;
+    margin-left: 8px;
 }
-.details{
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top:50px ;
-}
-.col{
+.flex{
     display: flex;
     align-items: center;
-    text-align: left;
 }
-.col img{
-    width: 40%;
-    margin-right: 10px;
+h1.temp{
+    margin: 0;
+    margin-bottom: 0.4em;
 }
-.humidity ,.Wind{
-    font-size: 28px;
-    margin-top: -6px;
+.weather.loading{
+    visibility:hidden;
+    max-height: 20px;
+    position:relative;
+    
 }
-
-.error{
-    text-align: left;
-    margin-left: 10px;
-    font-size: 14px;
-    margin-top: 10px;
-    display: none;
+.weather.loading:after{
+    visibility: visible;
+    content: "Loading.....";
+    color: white;
+    position: absolute;
+    top:0%
+    
 }

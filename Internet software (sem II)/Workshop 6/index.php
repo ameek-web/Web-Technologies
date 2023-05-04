@@ -195,5 +195,13 @@ if ($sum == $number)
     echo "Armstrong number";
 else
     echo "Not an Armstrong number";
+
+
+
+
+
+
+
+
 ?>
 

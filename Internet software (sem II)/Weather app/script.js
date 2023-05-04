@@ -1,52 +1,46 @@
-const apikey="3f5aa6796159e57000ab84a92180e36c ";
-    const apiUrl="https://api.openweathermap.org/data/2.5/weather?q=Louisville&unit=metric&appid=";
+let weather = {
+    apiKey: "3f5aa6796159e57000ab84a92180e36c",
+    fetchWeather: function(city) {
+        fetch(
+            "https://api.openweathermap.org/data/2.5/weather?q=Louisville&appid=3f5aa6796159e57000ab84a92180e36c"
+            
+        )
+        .then((response) => response.json())
+        .then((data) => this.displayWeather(data));
+    },
+    displayWeather: function(data) {
+        const { name } = data;
+        const { icon, description } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+        const currentDate = new Date();
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const dayOfWeek = daysOfWeek[currentDate.getDay()];
+        const date = currentDate.getDate();
+        console.log(name, icon, description, temp, humidity, speed, dayOfWeek, date);
+        document.querySelector(".city").innerText = "Weather in " + name;
+        document.querySelector(".description").innerText = description;
+        document.querySelector(".temp").innerText = temp + "K";
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".wind").innerText = "Wind speed: " + speed + "km/h";
+        document.querySelector(".day").innerText = dayOfWeek;
+        document.querySelector(".date").innerText = date + "th May" ;
+        document.querySelector(".weather").classList.remove("loading");
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/random/?" + name + "')"
+    },
+    search:function(){
+        this.fetchWeather(document.querySelector(".search-bar").value);
+    }
+};
 
-    const searchBox=document.querySelector(".search input");
-    const searchBtn=document.querySelector(".search button");
-    const weatherIcon=document.querySelector(".weather-icon");
+document.querySelector(".search button").addEventListener("click", function() {
+    weather.search();
+});
 
-    async function checkweather(city){
-    const response=await fetch(apiUrl + city + `&appid=${apikey}`);
-    
-    if(response.status == 404){
-        document.querySelector(".error").style.display="block";
-        document.querySelector(".weather").style.display="none";
-      
-    }else{
-        var data=await response.json();
-    
+document.querySelector(".search-bar").addEventListener("keyup", function(event) {
+    if (event.key == "Enter") {
+        weather.search();
+    }
+});
 
-    document.querySelector(".city").innerHTML = data.name ;
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
-    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
-
-    if(data.weather[0].main =="Clouds"){
-        weatherIcon.src="cloud.jpg";
-    }
-    elseif(data.weather[0].main =="Drizzle")
-    {
-        weatherIcon.src="drizzle.png";
-    }
-    elseif(data.weather[0].main =="Rain")
-    {
-        weatherIcon.src="rain.webp";
-    }
-    elseif(data.weather[0].main =="Cold")
-    {
-        weatherIcon.src="snow.webp";
-    }
-    elseif(data.weather[0].main =="Clear")
-    {
-        weatherIcon.src="sunny.jpg";
-    }
-    document.querySelector(".weather").style.display="block";
-    document.querySelector(".error").style.display="none";
-    }
-
-    }
-    
-    searchBtn.addEventListener("click",()=> {
-        checkweather(searchBox.value);
-
-})      
+weather.fetchWeather("Paradise");
